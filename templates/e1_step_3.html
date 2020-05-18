@@ -56,10 +56,7 @@
         {% for i in range(0,3) %}
             <th>
                 <p class="hide">
-                    {{ session["coeff"][0] }}*{{ xs[i] }}<sup>3</sup>+
-                    {{ session["coeff"][1] }}*{{ xs[i] }}<sup>2</sup>+
-                    {{ session["coeff"][2] }}*{{ xs[i] }}<sup>1</sup>+
-                    {{ session["coeff"][3] }}*{{ xs[i] }} = {{ session["resp"][i] }}
+                    {{xs[i]}}
                 </p>
             </th>
         {% endfor %}
