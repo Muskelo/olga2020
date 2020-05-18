@@ -5,9 +5,10 @@
     <title>Title</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <style>
-        body{
+        body {
             padding: 20px 15%;
         }
+
         * {
             max-width: 100%;
         }
@@ -70,14 +71,16 @@
     <p>Ввод</p>
     <form action="{{ url_for("e1_step_3") }}" method="post">
         <label>X<sub>{{ session["N3"] }}</sub> =
-            <input type="text" name="response" id="response" onkeyup="this.value = this.value.replace(/[^i\.\-\+\d]/g,'');">
+            <input type="text" name="response" id="response"
+                   onkeyup="this.value = this.value.replace(/[^i\.\-\+\d]/g,'');">
         </label>
         <button type="submit">Проверить</button>
     </form>
 {% else %}
-    <p>Вот и все, теперь попробуй решить что нибудь по сложнеее</p><a href="{{ url_for("index") }}">
-    <button>Перейти в меню</button>
-</a>
+    <p>Осталось проверить полученныем нами результаты</p>
+    <a href="{{ url_for("e1_step_4") }}">
+        <button>Последний шаг</button>
+    </a>
 {% endif %}
 
 {% if 1 in errors %}
